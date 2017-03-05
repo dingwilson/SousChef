@@ -15,6 +15,8 @@
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
 		C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D381851E6BBB7D008A7454 /* Assets.xcassets */; };
 		C8D381891E6BBB7D008A7454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381871E6BBB7D008A7454 /* LaunchScreen.storyboard */; };
+		EA7F1B281E6BC50A000AA6FE /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7F1B271E6BC50A000AA6FE /* RecipeSearchViewController.swift */; };
+		EA7F1B2A1E6BC53D000AA6FE /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7F1B291E6BC53D000AA6FE /* Keys.plist */; };
 		F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		C8D381851E6BBB7D008A7454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D381881E6BBB7D008A7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D3818A1E6BBB7D008A7454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7F1B271E6BC50A000AA6FE /* RecipeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewController.swift; sourceTree = "<group>"; };
+		EA7F1B291E6BC53D000AA6FE /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SousChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,10 +92,12 @@
 				C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */,
 				C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */,
 				C8BB78E11E6BC106000DAA56 /* SplashViewController.swift */,
+				EA7F1B271E6BC50A000AA6FE /* RecipeSearchViewController.swift */,
 				C8D381821E6BBB7D008A7454 /* Main.storyboard */,
 				C8D381851E6BBB7D008A7454 /* Assets.xcassets */,
 				C8D381871E6BBB7D008A7454 /* LaunchScreen.storyboard */,
 				C8D3818A1E6BBB7D008A7454 /* Info.plist */,
+				EA7F1B291E6BC53D000AA6FE /* Keys.plist */,
 				C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */,
 			);
 			path = SousChef;
@@ -164,6 +170,7 @@
 				C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */,
 				C8BB78DD1E6BBFC0000DAA56 /* Recipe in Resources */,
 				C8BB78DE1E6BBFC0000DAA56 /* RecipeSearch in Resources */,
+				EA7F1B2A1E6BC53D000AA6FE /* Keys.plist in Resources */,
 				C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */,
 				C8BB78E01E6BC09B000DAA56 /* Background.mp4 in Resources */,
 			);
@@ -224,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7F1B281E6BC50A000AA6FE /* RecipeSearchViewController.swift in Sources */,
 				C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */,
 				C8BB78E21E6BC106000DAA56 /* SplashViewController.swift in Sources */,
 			);
