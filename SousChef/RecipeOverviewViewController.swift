@@ -10,11 +10,13 @@ import UIKit
 
 class RecipeOverviewViewController: UIViewController {
     
+    var recipe: Recipe = Recipe()
+    
     @IBOutlet weak var recipeTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        recipeTextView.text = recipe.imageURL
         // Do any additional setup after loading the view.
     }
     

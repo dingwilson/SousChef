@@ -135,12 +135,9 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OB2-Fb-FfZ" id="M0B-H9-NeH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="aoH-1y-TD6" kind="show" identifier="didSelectRecipe" id="29d-pt-Vxv"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -148,6 +145,9 @@
                             <outlet property="delegate" destination="b5a-DW-iBg" id="etG-66-cPg"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="aoH-1y-TD6" kind="show" identifier="goToOverview" id="fTT-MM-waV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e39-EH-sbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

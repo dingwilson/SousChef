@@ -68,9 +68,9 @@ class RecipeSearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(self.recipeSearchResults.resultCount)
+
         if segue.identifier == "goToRecipeResults" {
-            var nextScene =  segue.destination as! RecipeSearchResultsTableViewController
+            let nextScene =  segue.destination as! RecipeSearchResultsTableViewController
             
             nextScene.recipeSearchResults = self.recipeSearchResults
             // Pass the selected object to the new view controller.

@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class RecipeSearchResultsTableViewController: UITableViewController {
     
     var recipeSearchResults: RecipeSearch = RecipeSearch()
+    var selectedRecipe: Recipe = Recipe()
+    var selectedRow: Int = 0
+    var API_KEY: String = ""
+    
+    private func getKeyFromPlist() {
+        if let path = Bundle.main.path(forResource: "Keys", ofType: "plist") {
+            let dictRoot = NSDictionary(contentsOfFile: path)
+            
+            if let dict = dictRoot {
+                API_KEY = dict["api_key"] as! String
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getKeyFromPlist()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,6 +61,7 @@ class RecipeSearchResultsTableViewController: UITableViewController {
         cell.textLabel?.text = self.recipeSearchResults.results?[indexPath.row].title
         return cell
     }
+    
     
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +107,33 @@ class RecipeSearchResultsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+ 
+        let id = self.recipeSearchResults.results?[indexPath.row].recipeID
+        
+        let url = "https://api2.bigoven.com/recipe/\(id!)?api_key=\(API_KEY)"
+        
+        Alamofire.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                self.selectedRecipe = Recipe(json: json)
+                self.performSegue(withIdentifier: "goToOverview", sender: self)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToOverview" {
+            let nextScene =  segue.destination as! RecipeOverviewViewController
+            nextScene.recipe = self.selectedRecipe
+            // Pass the selected object to the new view controller.
+        }
+    }
 
 }

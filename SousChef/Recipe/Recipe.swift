@@ -92,6 +92,9 @@ public final class Recipe {
   public var activeMinutes: Int?
   public var adminBoost: Int?
 
+    init() {
+        
+    }
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
   ///
