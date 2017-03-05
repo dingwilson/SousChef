@@ -59,6 +59,9 @@ class RecipeStepsViewController: UIViewController {
                 currentStep = -1
                 upcomingActionLabel.text = "Complete"
             }
+        } else {
+            speak(data:instructions[currentStep])
+            self.timer.invalidate()
         }
     }
     
