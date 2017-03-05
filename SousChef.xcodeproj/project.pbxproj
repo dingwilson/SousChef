@@ -12,9 +12,12 @@
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
 		C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D381851E6BBB7D008A7454 /* Assets.xcassets */; };
 		C8D381891E6BBB7D008A7454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381871E6BBB7D008A7454 /* LaunchScreen.storyboard */; };
+		F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.release.xcconfig"; sourceTree = "<group>"; };
+		AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.debug.xcconfig"; sourceTree = "<group>"; };
 		C8D3817B1E6BBB7C008A7454 /* SousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D381801E6BBB7D008A7454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		C8D381851E6BBB7D008A7454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D381881E6BBB7D008A7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D3818A1E6BBB7D008A7454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SousChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B323561268298E0BE41BB17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8BF6E65E78F3CE36E929577 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */,
+				8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C8D381721E6BBB7C008A7454 = {
 			isa = PBXGroup;
 			children = (
 				C8D3817D1E6BBB7D008A7454 /* SousChef */,
 				C8D3817C1E6BBB7C008A7454 /* Products */,
+				B8BF6E65E78F3CE36E929577 /* Pods */,
+				0B323561268298E0BE41BB17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8D3818D1E6BBB7D008A7454 /* Build configuration list for PBXNativeTarget "SousChef" */;
 			buildPhases = (
+				14DD0C89EFCD38F47B3DDA26 /* [CP] Check Pods Manifest.lock */,
 				C8D381771E6BBB7C008A7454 /* Sources */,
 				C8D381781E6BBB7C008A7454 /* Frameworks */,
 				C8D381791E6BBB7C008A7454 /* Resources */,
+				E67849199E1348C648E3D0ED /* [CP] Embed Pods Frameworks */,
+				9CB17428B37C07D5BCCD0448 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14DD0C89EFCD38F47B3DDA26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CB17428B37C07D5BCCD0448 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SousChef/Pods-SousChef-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E67849199E1348C648E3D0ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SousChef/Pods-SousChef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8D381771E6BBB7C008A7454 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		C8D3818E1E6BBB7D008A7454 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z88HQX98VL;
@@ -270,6 +346,7 @@
 		};
 		C8D3818F1E6BBB7D008A7454 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z88HQX98VL;
