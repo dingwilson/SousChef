@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8BB78DD1E6BBFC0000DAA56 /* Recipe in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DB1E6BBFC0000DAA56 /* Recipe */; };
+		C8BB78DE1E6BBFC0000DAA56 /* RecipeSearch in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */; };
 		C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */; };
 		C8D381811E6BBB7D008A7454 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381801E6BBB7D008A7454 /* ViewController.swift */; };
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.release.xcconfig"; sourceTree = "<group>"; };
 		AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.debug.xcconfig"; sourceTree = "<group>"; };
+		C8BB78DB1E6BBFC0000DAA56 /* Recipe */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Recipe; sourceTree = "<group>"; };
+		C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RecipeSearch; sourceTree = "<group>"; };
 		C8D3817B1E6BBB7C008A7454 /* SousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D381801E6BBB7D008A7454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		C8D3817D1E6BBB7D008A7454 /* SousChef */ = {
 			isa = PBXGroup;
 			children = (
+				C8BB78DB1E6BBFC0000DAA56 /* Recipe */,
+				C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */,
 				C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */,
 				C8D381801E6BBB7D008A7454 /* ViewController.swift */,
 				C8D381821E6BBB7D008A7454 /* Main.storyboard */,
@@ -153,6 +159,8 @@
 			files = (
 				C8D381891E6BBB7D008A7454 /* LaunchScreen.storyboard in Resources */,
 				C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */,
+				C8BB78DD1E6BBFC0000DAA56 /* Recipe in Resources */,
+				C8BB78DE1E6BBFC0000DAA56 /* RecipeSearch in Resources */,
 				C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +385,7 @@
 				C8D3818F1E6BBB7D008A7454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
