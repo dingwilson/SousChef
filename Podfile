@@ -11,5 +11,6 @@ target 'SousChef' do
   pod 'SwiftVideoBackground'
   pod 'SDWebImage'
   pod 'Cosmos'
+  pod 'Charts'
 
 end

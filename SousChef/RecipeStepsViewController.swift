@@ -98,6 +98,27 @@ class RecipeStepsViewController: UIViewController {
             }
         }
         
+        if !isDone {
+            actionLabel.text = instructions[currentStep]
+            if instructions[currentStep].range(of: "http") == nil {
+                speak(data: instructions[currentStep])
+            }
+            
+            if instructions.count > currentStep + 1 {
+                currentStep += 1
+                upcomingActionLabel.text = instructions[currentStep]
+                if instructions.count <= currentStep + 1 {
+                    isDone = true
+                }
+            }
+        } else {
+            if instructions.count == currentStep + 1 {
+                if instructions[currentStep].range(of: "http") == nil {
+                    speak(data: instructions[currentStep])
+                }
+            }
+        }
+        
         actionLabel.text = instructions[currentStep]
         
 //        if (!isDone && triggered) {

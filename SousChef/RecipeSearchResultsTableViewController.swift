@@ -44,7 +44,6 @@ class RecipeSearchResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.recipeSearchResults.results!.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! RecipeTableViewCell
@@ -57,7 +56,7 @@ class RecipeSearchResultsTableViewController: UITableViewController {
         cell.recipeImageView?.layer.cornerRadius = (cell.recipeImageView?.frame.size.width)!/2
         cell.recipeImageView?.clipsToBounds = true
         
-        cell.titleLabel?.text = self.recipeSearchResults.results?[indexPath.row].title?.capitalizingFirstLetter()
+        cell.titleLabel?.text = self.recipeSearchResults.results?[indexPath.row].title?.capitalized
         
         cell.starView?.rating = Double((self.recipeSearchResults.results?[indexPath.row].starRating)!)
         
