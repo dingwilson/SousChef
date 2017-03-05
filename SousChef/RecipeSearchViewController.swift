@@ -12,7 +12,8 @@ import Alamofire
 
 class RecipeSearchViewController: UIViewController {
     
-    var API_KEY: String = "";
+    var API_KEY: String = ""
+    var recipeSearchResults: RecipeSearch = RecipeSearch()
     
     @IBOutlet weak var recipeSearchTextField: UITextField!
     
@@ -24,7 +25,6 @@ class RecipeSearchViewController: UIViewController {
         super.viewDidLoad()
         
         getKeyFromPlist()
-        getRecipes(query: "Potato Soup")
         
     }
     
@@ -48,10 +48,8 @@ class RecipeSearchViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                
-                let results = RecipeSearch(json: json)
-                
-                print(results.resultCount)
+                self.recipeSearchResults = RecipeSearch(json: json)
+                self.performSegue(withIdentifier: "goToRecipeResults", sender: self)
             case .failure(let error):
                 print(error)
             }
@@ -62,8 +60,23 @@ class RecipeSearchViewController: UIViewController {
     }
     
     @IBAction func didPressSearchButton(_ sender: UIButton) {
+        let query = recipeSearchTextField.text!
+        
+        if (query != "") {
+            getRecipes(query: query);
+        }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(self.recipeSearchResults.resultCount)
+        if segue.identifier == "goToRecipeResults" {
+            var nextScene =  segue.destination as! RecipeSearchResultsTableViewController
+            
+            nextScene.recipeSearchResults = self.recipeSearchResults
+            // Pass the selected object to the new view controller.
+        }
+    }
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

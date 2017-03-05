@@ -19,6 +19,10 @@ public final class RecipeSearch {
   // MARK: Properties
   public var results: [Results]?
   public var resultCount: Int?
+    
+    init() {
+        
+    }
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
