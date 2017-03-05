@@ -67,7 +67,9 @@ class RecipeStepsViewController: UIViewController {
     func getNext() {
         if !isDone {
             actionLabel.text = instructions[currentStep]
-            speak(data: instructions[currentStep])
+            if instructions[currentStep].range(of: "http") == nil {
+                speak(data: instructions[currentStep])
+            }
             
             if instructions.count > currentStep + 1 {
                 currentStep += 1
@@ -78,7 +80,9 @@ class RecipeStepsViewController: UIViewController {
             }
         } else {
             if instructions.count == currentStep + 1 {
-                speak(data: instructions[currentStep])
+                if instructions[currentStep].range(of: "http") == nil {
+                    speak(data: instructions[currentStep])
+                }
             }
             
             self.timer.invalidate()
