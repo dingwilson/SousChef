@@ -33,6 +33,8 @@ class RecipeStepsViewController: UIViewController {
     let assistantTriggerWords: [String] = ["sue", "soon", "slew", "suit", "suse", "Sir", "so"]
     var triggered: Bool = true
     var lastCount: Int = 0
+    var timerStarted = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -120,28 +122,7 @@ class RecipeStepsViewController: UIViewController {
         }
         
         actionLabel.text = instructions[currentStep]
-        
-//        if (!isDone && triggered) {
-//            self.stopStreaming()
-//            self.speechToText = SpeechToText(username: username, password: password)
-//            self.lastCount = 0
-//            self.startStreaming()
-//            actionLabel.text = instructions[currentStep]
-//            //            speak(data: instructions[currentStep])
-//            
-//            if (currentStep - 1 >= 0) {
-//                currentStep -= 1
-//                if (0 >= currentStep - 1) {
-//                    isDone = true
-//                }
-//            }
-//        } else {
-//            if 0 == currentStep - 1 {
-//                //speak(data: instructions[currentStep])
-//            }
-//            
-//            self.timer.invalidate()
-//        }
+
     }
     
     func speak(data: String) {
@@ -185,20 +166,25 @@ class RecipeStepsViewController: UIViewController {
                     print("Triggered.")
                     
                     if (results.bestTranscript.contains("set a timer" ) || results.bestTranscript.contains("set a time there" ) || results.bestTranscript.contains("Susanna timer" )) {
-                        print("SETTING A TIMER!")
+//                        print("SETTING A TIMER!")
                         
                         if (results.bestTranscript.contains("minutes") || results.bestTranscript.contains("minute")) {
                             
+                            let nums = [ "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"]
+                            
                             let splitResults = results.bestTranscript.components(separatedBy: " ")
                             
-                            var location = splitResults.contains("minutes")
-                            
-                            if (!location) {
-                                location = splitResults.contains("minute")
+                            for word in splitResults {
+                                if nums.contains(word) {
+                                    // FOUND IT HERE.
+                                    let numberResult = self.convertNumber(number: word)
+                                    print("NUMBER: \(numberResult)")
+                                    
+                                    if (!self.timerStarted) {
+                                        self.startTimer(num: numberResult)
+                                    }
+                                }
                             }
-                            self.triggered = true;
-                            self.speechToText.stopRecognizeMicrophone();
-
                         }
                         
                     } else if (results.bestTranscript.contains("next") || results.bestTranscript.contains("forward")  || results.bestTranscript.contains("for")) {
@@ -227,8 +213,77 @@ class RecipeStepsViewController: UIViewController {
         }
     }
     
+    func startTimer(num: Int) {
+        self.timerStarted = true
+    }
+    
     func stopStreaming() {
         speechToText.stopRecognizeMicrophone()
     }
 
+    func convertNumber(number: String) -> Int {
+        if (number == "one") {
+            return 1
+        } else if (number == "two") {
+            return 2
+        } else if (number == "three") {
+            return 3
+        } else if (number == "four") {
+            return 4
+        } else if (number == "five") {
+            return 5
+        } else if (number == "six") {
+            return 6
+        } else if (number == "seven") {
+            return 7
+        } else if (number == "eight") {
+            return 8
+        } else if (number == "nine") {
+            return 9
+        }else if (number == "ten") {
+            return 10
+        }else if (number == "eleven") {
+            return 11
+        }else if (number == "twelve") {
+            return 12
+        }else if (number == "thirteen") {
+            return 13
+        }else if (number == "fourteen") {
+            return 14
+        }else if (number == "fifteen") {
+            return 15
+        }else if (number == "sixteen") {
+            return 16
+        }else if (number == "seventeen") {
+            return 17
+        }else if (number == "eightteen") {
+            return 18
+        }else if (number == "nineteen") {
+            return 19
+        }else if (number == "twenty") {
+            return 20
+        }else if (number == "twenty one") {
+            return 21
+        }else if (number == "twenty two") {
+            return 22
+        }else if (number == "twenty three") {
+            return 23
+        }else if (number == "twenty four") {
+            return 24
+        }else if (number == "twenty five") {
+            return 25
+        }else if (number == "twenty six") {
+            return 26
+        }else if (number == "twenty seven") {
+            return 27
+        }else if (number == "twenty eight") {
+            return 28
+        }else if (number == "twenty nine") {
+            return 29
+        }else if (number == "thirty") {
+            return 30
+        }
+        
+        return 30
+    }
 }
