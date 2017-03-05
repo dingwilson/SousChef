@@ -180,7 +180,6 @@
                                     <outlet property="descriptionLabel" destination="yAx-4f-dVu" id="5je-44-MnK"/>
                                     <outlet property="recipeImageView" destination="sP3-m8-KCi" id="IX3-6Q-jZ3"/>
                                     <outlet property="titleLabel" destination="BDB-7X-lmI" id="AWi-rN-Si0"/>
-                                    <segue destination="aoH-1y-TD6" kind="show" identifier="didSelectRecipe" id="29d-pt-Vxv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
