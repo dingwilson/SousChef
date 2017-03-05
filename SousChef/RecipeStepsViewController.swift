@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RecipeStepsViewController: UIViewController {
 
@@ -23,6 +24,8 @@ class RecipeStepsViewController: UIViewController {
     
     var instructions: [String] = [String]()
     
+    let mySynthesizer = AVSpeechSynthesizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +35,7 @@ class RecipeStepsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.getNext), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.getNext), userInfo: nil, repeats: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -44,6 +47,7 @@ class RecipeStepsViewController: UIViewController {
     func getNext() {
         if !isDone {
             actionLabel.text = instructions[currentStep]
+            speak(data: instructions[currentStep])
             
             if instructions.count > currentStep + 1 {
                 currentStep += 1
@@ -56,6 +60,29 @@ class RecipeStepsViewController: UIViewController {
                 upcomingActionLabel.text = "Complete"
             }
         }
+    }
+    
+    func speak(data: String) {
+        let myUtterence = AVSpeechUtterance(string: data)
+        myUtterence.rate = AVSpeechUtteranceDefaultSpeechRate
+        myUtterence.voice = AVSpeechSynthesisVoice(language: "en-US")
+        myUtterence.pitchMultiplier = 1
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch let error as NSError {
+            print("Error: Could not set audio category: \(error), \(error.userInfo)")
+        }
+        
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        }
+        catch let error as NSError {
+            print("Error: Could not setActive to true: \(error), \(error.userInfo)")
+        }
+        
+        mySynthesizer.speak(myUtterence)
     }
 
 }
