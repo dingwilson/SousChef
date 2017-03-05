@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1964" y="136.28185907046478"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Recipe Search Results Table View Controller-->
         <scene sceneID="HFa-Co-sRK">
             <objects>
-                <tableViewController id="b5a-DW-iBg" sceneMemberID="viewController">
+                <tableViewController id="b5a-DW-iBg" customClass="RecipeSearchResultsTableViewController" customModule="SousChef" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qyg-x4-iRQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="2919.1999999999998" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Overview View Controller-->
         <scene sceneID="KhE-jh-lGx">
             <objects>
-                <viewController id="aoH-1y-TD6" sceneMemberID="viewController">
+                <viewController id="aoH-1y-TD6" customClass="RecipeOverviewViewController" customModule="SousChef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3YW-Ux-chx"/>
                         <viewControllerLayoutGuide type="bottom" id="BSb-Dr-2Gz"/>
@@ -141,26 +141,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Min-ex-TsW">
-                                <rect key="frame" x="172" y="617" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Min-ex-TsW">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <state key="normal" title="Go"/>
                                 <connections>
                                     <segue destination="QXK-zz-Obv" kind="show" id="FQj-FP-waG"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qmS-d8-mGq">
+                                <rect key="frame" x="16" y="72" width="343" height="537"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qmS-d8-mGq" firstAttribute="trailing" secondItem="Puh-NJ-oPo" secondAttribute="trailingMargin" id="0qX-W0-IRx"/>
+                            <constraint firstItem="qmS-d8-mGq" firstAttribute="leading" secondItem="Puh-NJ-oPo" secondAttribute="leadingMargin" id="3RO-dE-WJQ"/>
+                            <constraint firstItem="qmS-d8-mGq" firstAttribute="top" secondItem="3YW-Ux-chx" secondAttribute="bottom" constant="8" symbolic="YES" id="BlG-Ha-a4z"/>
+                            <constraint firstItem="qmS-d8-mGq" firstAttribute="leading" secondItem="Min-ex-TsW" secondAttribute="leading" id="H3B-BH-cMl"/>
+                            <constraint firstItem="Min-ex-TsW" firstAttribute="top" secondItem="qmS-d8-mGq" secondAttribute="bottom" constant="8" symbolic="YES" id="PV0-Js-Zba"/>
+                            <constraint firstAttribute="bottom" secondItem="Min-ex-TsW" secondAttribute="bottom" constant="20" symbolic="YES" id="jiA-q9-Ffi"/>
+                            <constraint firstItem="qmS-d8-mGq" firstAttribute="trailing" secondItem="Min-ex-TsW" secondAttribute="trailing" id="vUD-j2-gq1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recipeTextView" destination="qmS-d8-mGq" id="nuL-U7-UVU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jR3-W2-SoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3999" y="137"/>
+            <point key="canvasLocation" x="3997.5999999999999" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Steps View Controller-->
         <scene sceneID="Dyt-au-igw">
             <objects>
-                <viewController id="QXK-zz-Obv" sceneMemberID="viewController">
+                <viewController id="QXK-zz-Obv" customClass="RecipeStepsViewController" customModule="SousChef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A3N-pi-O2T"/>
                         <viewControllerLayoutGuide type="bottom" id="PZu-dc-Azd"/>

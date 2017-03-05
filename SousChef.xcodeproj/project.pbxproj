@@ -12,6 +12,9 @@
 		C8BB78E01E6BC09B000DAA56 /* Background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */; };
 		C8BB78E21E6BC106000DAA56 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E11E6BC106000DAA56 /* SplashViewController.swift */; };
 		C8BB78E41E6BC703000DAA56 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78E31E6BC703000DAA56 /* Keys.plist */; };
+		C8BB78E61E6BC84C000DAA56 /* RecipeSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E51E6BC84C000DAA56 /* RecipeSearchResultsTableViewController.swift */; };
+		C8BB78E81E6BC867000DAA56 /* RecipeOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E71E6BC867000DAA56 /* RecipeOverviewViewController.swift */; };
+		C8BB78EA1E6BC87C000DAA56 /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E91E6BC87C000DAA56 /* RecipeStepsViewController.swift */; };
 		C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */; };
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
 		C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D381851E6BBB7D008A7454 /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.mp4; sourceTree = "<group>"; };
 		C8BB78E11E6BC106000DAA56 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C8BB78E31E6BC703000DAA56 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		C8BB78E51E6BC84C000DAA56 /* RecipeSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		C8BB78E71E6BC867000DAA56 /* RecipeOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeOverviewViewController.swift; sourceTree = "<group>"; };
+		C8BB78E91E6BC87C000DAA56 /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
 		C8D3817B1E6BBB7C008A7454 /* SousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D381831E6BBB7D008A7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +99,9 @@
 				C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */,
 				C8BB78E11E6BC106000DAA56 /* SplashViewController.swift */,
 				EA7F1B271E6BC50A000AA6FE /* RecipeSearchViewController.swift */,
+				C8BB78E51E6BC84C000DAA56 /* RecipeSearchResultsTableViewController.swift */,
+				C8BB78E71E6BC867000DAA56 /* RecipeOverviewViewController.swift */,
+				C8BB78E91E6BC87C000DAA56 /* RecipeStepsViewController.swift */,
 				C8D381821E6BBB7D008A7454 /* Main.storyboard */,
 				C8D381851E6BBB7D008A7454 /* Assets.xcassets */,
 				C8D381871E6BBB7D008A7454 /* LaunchScreen.storyboard */,
@@ -231,8 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BB78EA1E6BC87C000DAA56 /* RecipeStepsViewController.swift in Sources */,
 				EA7F1B281E6BC50A000AA6FE /* RecipeSearchViewController.swift in Sources */,
 				C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */,
+				C8BB78E81E6BC867000DAA56 /* RecipeOverviewViewController.swift in Sources */,
+				C8BB78E61E6BC84C000DAA56 /* RecipeSearchResultsTableViewController.swift in Sources */,
 				C8BB78E21E6BC106000DAA56 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
