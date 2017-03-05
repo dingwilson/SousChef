@@ -10,8 +10,14 @@ import UIKit
 
 class RecipeStepsViewController: UIViewController {
 
+    var instructions: [String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in instructions {
+            print(i)
+        }
 
     }
 

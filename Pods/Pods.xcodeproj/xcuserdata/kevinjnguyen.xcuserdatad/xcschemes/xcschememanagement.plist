@@ -11,6 +11,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Pods-SousChef.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -40,12 +45,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0E30FD09FCF628681CF0837D1238145A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3543CE640A91ABE980FE5C8ED19733B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>3AE346A862AA4CE2E351C78CE2782E6C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4FDC533A4360A68ABDCE852F04B30927</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61B26E1F118C0D4A21E6A70A27E89E3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -65,7 +85,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9DD12C9D896B67F94F9C3933F8F4E7EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BB649467D3828F1F1C1884FEC0918DEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7EE0FEA00DE00F3249E5115C3F54CA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

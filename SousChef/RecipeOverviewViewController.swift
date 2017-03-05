@@ -28,15 +28,14 @@ class RecipeOverviewViewController: UIViewController {
     
     @IBOutlet weak var recipeTextView: UITextView!
     
+    var results = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         recipeTextView.text = recipe.instructions
         
-        var results = [String]()
-        
         let temp = recipe.instructions?.components(separatedBy: ". ")
-        
         
         for t in temp! { // For each instruction
             let te = t.components(separatedBy: "\n")
@@ -55,5 +54,16 @@ class RecipeOverviewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToInstructions" {
+            let nextScene =  segue.destination as! RecipeStepsViewController
+            nextScene.instructions = self.results
+        }
+    }
+    
+    @IBAction func goButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToInstructions", sender: self)
+    }
     
 }
