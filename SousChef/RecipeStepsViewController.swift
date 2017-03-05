@@ -222,9 +222,13 @@ class RecipeStepsViewController: UIViewController {
     
     func startTimer(num: Int) {
         self.timerStarted = true
+        
+        self.timerTime = num * 60
+        
+        
         self.timeLabel.isHidden = false
         
-        self.timerTime = num
+        self.runTimer()
         
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runTimer), userInfo: nil, repeats: true)
     }
@@ -332,4 +336,13 @@ class RecipeStepsViewController: UIViewController {
         
         return 30
     }
+    
+    @IBAction func prevButtonPressed(_ sender: Any) {
+        self.getPrev()
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        self.getNext()
+    }
+    
 }
