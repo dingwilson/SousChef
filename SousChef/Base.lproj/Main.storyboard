@@ -24,29 +24,41 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DP-re-ej3" customClass="BackgroundVideo" customModule="SwiftVideoBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as5-NZ-aAR">
+                                        <rect key="frame" x="49" y="583" width="276" height="56"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="KhZ-zZ-Tbd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Begin">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ss9-Ra-h9l" kind="show" id="eSI-qv-WIf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="as5-NZ-aAR" firstAttribute="leading" secondItem="8DP-re-ej3" secondAttribute="leading" constant="49" id="2RV-UY-yMz"/>
+                                    <constraint firstItem="as5-NZ-aAR" firstAttribute="centerX" secondItem="8DP-re-ej3" secondAttribute="centerX" id="CFe-w0-PxP"/>
+                                    <constraint firstAttribute="bottom" secondItem="as5-NZ-aAR" secondAttribute="bottom" constant="28" id="aeo-QQ-ksJ"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as5-NZ-aAR">
-                                <rect key="frame" x="111" y="617" width="153" height="30"/>
-                                <state key="normal" title="Continue"/>
-                                <connections>
-                                    <segue destination="ss9-Ra-h9l" kind="show" id="eSI-qv-WIf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8DP-re-ej3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AF7-ko-Xya"/>
-                            <constraint firstAttribute="bottom" secondItem="as5-NZ-aAR" secondAttribute="bottom" constant="20" symbolic="YES" id="Cuq-Ej-rTI"/>
-                            <constraint firstItem="8DP-re-ej3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I61-tk-7kQ"/>
-                            <constraint firstItem="8DP-re-ej3" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="SMe-mN-tqM"/>
-                            <constraint firstAttribute="trailing" secondItem="8DP-re-ej3" secondAttribute="trailing" id="bKI-ng-hgF"/>
-                            <constraint firstItem="8DP-re-ej3" firstAttribute="centerX" secondItem="as5-NZ-aAR" secondAttribute="centerX" id="cWe-so-9WP"/>
-                            <constraint firstItem="as5-NZ-aAR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="95" id="rLL-nU-v9p"/>
+                            <constraint firstItem="8DP-re-ej3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rfc-lF-BsX"/>
+                            <constraint firstItem="8DP-re-ej3" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="XDP-ga-V7t"/>
+                            <constraint firstAttribute="trailing" secondItem="8DP-re-ej3" secondAttribute="trailing" id="mfs-nr-yAY"/>
+                            <constraint firstItem="8DP-re-ej3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vNI-YF-R9h"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundVideo" destination="8DP-re-ej3" id="6FX-3K-eBn"/>
+                        <outlet property="beginButton" destination="as5-NZ-aAR" id="sG9-An-7Cx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,11 +12,23 @@ import SwiftVideoBackground
 class SplashViewController: UIViewController {
 
     @IBOutlet weak var backgroundVideo: BackgroundVideo!
+    @IBOutlet weak var beginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         backgroundVideo.createBackgroundVideo(name: "Background", type: "mp4")
+        
+        beginButton.layer.cornerRadius = 8
+        beginButton.alpha = 0.0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 1.5, animations: {
+            self.beginButton.alpha = 1.0
+        })
     }
 
     override func didReceiveMemoryWarning() {
