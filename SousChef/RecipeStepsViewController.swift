@@ -100,36 +100,16 @@ class RecipeStepsViewController: UIViewController {
         self.lastCount = 0
         self.startStreaming()
         
-        if (currentStep - 1 >= 0) {
-            currentStep -= 1
-            if (currentStep == 0) {
-                isDone = true
-            }
+        currentStep -= 1
+        if (currentStep == 0) {
+            isDone = true
         }
         
         if !isDone {
             actionLabel.text = instructions[currentStep]
-            if instructions[currentStep].range(of: "http") == nil {
-                speak(data: instructions[currentStep])
-            }
-            
-            if instructions.count > currentStep + 1 {
-                currentStep += 1
-                upcomingActionLabel.text = instructions[currentStep]
-                if instructions.count <= currentStep + 1 {
-                    isDone = true
-                }
-            }
-        } else {
-            if instructions.count == currentStep + 1 {
-                if instructions[currentStep].range(of: "http") == nil {
-                    speak(data: instructions[currentStep])
-                }
-            }
+            upcomingActionLabel.text = instructions[currentStep+1]
         }
-        
-        actionLabel.text = instructions[currentStep]
-
+ 
     }
     
     func speak(data: String) {
