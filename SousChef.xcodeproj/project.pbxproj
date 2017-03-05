@@ -27,8 +27,27 @@
 		EA7F1B691E6BDCD6000AA6FE /* RecipeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7F1B661E6BDCD6000AA6FE /* RecipeSearch.swift */; };
 		EA7F1B6A1E6BDCD6000AA6FE /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7F1B671E6BDCD6000AA6FE /* Results.swift */; };
 		EA7F1B6C1E6BDDB4000AA6FE /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7F1B6B1E6BDDB4000AA6FE /* Keys.plist */; };
+		EAE981FE1E6C3ACC00062D35 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE981F91E6C3A7100062D35 /* SpeechToTextV1.framework */; };
+		EAE981FF1E6C3ACD00062D35 /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAE981F91E6C3A7100062D35 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EAE982021E6C3AF200062D35 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE982011E6C3AF200062D35 /* RestKit.framework */; };
+		EAE982031E6C3AF200062D35 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAE982011E6C3AF200062D35 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EAE982001E6C3ACD00062D35 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EAE981FF1E6C3ACD00062D35 /* SpeechToTextV1.framework in Embed Frameworks */,
+				EAE982031E6C3AF200062D35 /* RestKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +74,9 @@
 		EA7F1B661E6BDCD6000AA6FE /* RecipeSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeSearch.swift; path = RecipeSearch/RecipeSearch.swift; sourceTree = "<group>"; };
 		EA7F1B671E6BDCD6000AA6FE /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Results.swift; path = RecipeSearch/Results.swift; sourceTree = "<group>"; };
 		EA7F1B6B1E6BDDB4000AA6FE /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		EAE981EF1E6C387200062D35 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		EAE981F91E6C3A7100062D35 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		EAE982011E6C3AF200062D35 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SousChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +86,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */,
+				EAE981FE1E6C3ACC00062D35 /* SpeechToTextV1.framework in Frameworks */,
+				EAE982021E6C3AF200062D35 /* RestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +97,9 @@
 		0B323561268298E0BE41BB17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAE981EF1E6C387200062D35 /* SpeechToTextV1.framework */,
+				EAE982011E6C3AF200062D35 /* RestKit.framework */,
+				EAE981F91E6C3A7100062D35 /* SpeechToTextV1.framework */,
 				FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */,
 			);
 			name = Frameworks;
@@ -162,6 +189,7 @@
 				C8D381791E6BBB7C008A7454 /* Resources */,
 				E67849199E1348C648E3D0ED /* [CP] Embed Pods Frameworks */,
 				9CB17428B37C07D5BCCD0448 /* [CP] Copy Pods Resources */,
+				EAE982001E6C3ACD00062D35 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,7 +212,7 @@
 				TargetAttributes = {
 					C8D3817A1E6BBB7C008A7454 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Z88HQX98VL;
+						DevelopmentTeam = VTH3535D42;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -411,13 +439,14 @@
 			baseConfigurationReference = AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z88HQX98VL;
+				DEVELOPMENT_TEAM = VTH3535D42;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SousChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wilsonding.SousChef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -429,7 +458,7 @@
 			baseConfigurationReference = 8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z88HQX98VL;
+				DEVELOPMENT_TEAM = VTH3535D42;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

@@ -14,8 +14,10 @@ class RecipeStepsViewController: UIViewController {
 
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var upcomingActionLabel: UILabel!
-    
     @IBOutlet weak var timeLabel: UILabel!
+    
+    var username = ""
+    var password = ""
     
     var currentStep = 0
     
@@ -27,10 +29,27 @@ class RecipeStepsViewController: UIViewController {
     
     let mySynthesizer = AVSpeechSynthesizer()
     
+    var speechToText: SpeechToText?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getNext()
+        
+        startStreaming()
+        
+    }
+    
+    private func getKeyFromPlist() {
+        if let path = Bundle.main.path(forResource: "Keys", ofType: "plist") {
+            let dictRoot = NSDictionary(contentsOfFile: path)
+            
+            if let dict = dictRoot {
+                username = dict["wat_pass"] as! String
+                password = dict["wat_pass"] as! String
+                self.speechToText = SpeechToText(username: username, password: password)
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,6 +106,20 @@ class RecipeStepsViewController: UIViewController {
         }
         
         mySynthesizer.speak(myUtterence)
+    }
+
+    func startStreaming() {
+        var settings = RecognitionSettings(contentType: .opus)
+        settings.continuous = true
+        settings.interimResults = true
+        let failure = { (error: Error) in print(error) }
+        speechToText?.recognizeMicrophone(settings: settings, failure: failure) { results in
+            print(results)
+        }
+    }
+    
+    func stopStreaming() {
+        speechToText?.stopRecognizeMicrophone()
     }
 
 }
