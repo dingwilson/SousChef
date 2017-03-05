@@ -9,5 +9,6 @@ target 'SousChef' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SwiftVideoBackground'
+  pod 'SDWebImage'
 
 end
