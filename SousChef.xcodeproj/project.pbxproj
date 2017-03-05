@@ -13,8 +13,6 @@
 		C8BB78E81E6BC867000DAA56 /* RecipeOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E71E6BC867000DAA56 /* RecipeOverviewViewController.swift */; };
 		C8BB78EA1E6BC87C000DAA56 /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E91E6BC87C000DAA56 /* RecipeStepsViewController.swift */; };
 		C8BB78EC1E6BEB27000DAA56 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78EB1E6BEB27000DAA56 /* RecipeTableViewCell.swift */; };
-		C8BB78F51E6C2C44000DAA56 /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8BB78ED1E6C2698000DAA56 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C8BB78F71E6C2CAA000DAA56 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BB78ED1E6C2698000DAA56 /* SpeechToTextV1.framework */; };
 		C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */; };
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
 		C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D381851E6BBB7D008A7454 /* Assets.xcassets */; };
@@ -32,20 +30,6 @@
 		F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C8BB78F61E6C2C44000DAA56 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C8BB78F51E6C2C44000DAA56 /* SpeechToTextV1.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.release.xcconfig"; sourceTree = "<group>"; };
 		AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,7 +39,6 @@
 		C8BB78E71E6BC867000DAA56 /* RecipeOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeOverviewViewController.swift; sourceTree = "<group>"; };
 		C8BB78E91E6BC87C000DAA56 /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
 		C8BB78EB1E6BEB27000DAA56 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
-		C8BB78ED1E6C2698000DAA56 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		C8D3817B1E6BBB7C008A7454 /* SousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D381831E6BBB7D008A7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +64,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */,
-				C8BB78F71E6C2CAA000DAA56 /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +73,6 @@
 		0B323561268298E0BE41BB17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C8BB78ED1E6C2698000DAA56 /* SpeechToTextV1.framework */,
 				FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */,
 			);
 			name = Frameworks;
@@ -181,7 +162,6 @@
 				C8D381791E6BBB7C008A7454 /* Resources */,
 				E67849199E1348C648E3D0ED /* [CP] Embed Pods Frameworks */,
 				9CB17428B37C07D5BCCD0448 /* [CP] Copy Pods Resources */,
-				C8BB78F61E6C2C44000DAA56 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
