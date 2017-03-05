@@ -10,8 +10,8 @@
 		C8BB78DD1E6BBFC0000DAA56 /* Recipe in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DB1E6BBFC0000DAA56 /* Recipe */; };
 		C8BB78DE1E6BBFC0000DAA56 /* RecipeSearch in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */; };
 		C8BB78E01E6BC09B000DAA56 /* Background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */; };
+		C8BB78E21E6BC106000DAA56 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E11E6BC106000DAA56 /* SplashViewController.swift */; };
 		C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */; };
-		C8D381811E6BBB7D008A7454 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381801E6BBB7D008A7454 /* ViewController.swift */; };
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
 		C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D381851E6BBB7D008A7454 /* Assets.xcassets */; };
 		C8D381891E6BBB7D008A7454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381871E6BBB7D008A7454 /* LaunchScreen.storyboard */; };
@@ -24,9 +24,9 @@
 		C8BB78DB1E6BBFC0000DAA56 /* Recipe */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Recipe; sourceTree = "<group>"; };
 		C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RecipeSearch; sourceTree = "<group>"; };
 		C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.mp4; sourceTree = "<group>"; };
+		C8BB78E11E6BC106000DAA56 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C8D3817B1E6BBB7C008A7454 /* SousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8D381801E6BBB7D008A7454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8D381831E6BBB7D008A7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8D381851E6BBB7D008A7454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D381881E6BBB7D008A7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 				C8BB78DB1E6BBFC0000DAA56 /* Recipe */,
 				C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */,
 				C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */,
-				C8D381801E6BBB7D008A7454 /* ViewController.swift */,
+				C8BB78E11E6BC106000DAA56 /* SplashViewController.swift */,
 				C8D381821E6BBB7D008A7454 /* Main.storyboard */,
 				C8D381851E6BBB7D008A7454 /* Assets.xcassets */,
 				C8D381871E6BBB7D008A7454 /* LaunchScreen.storyboard */,
@@ -224,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8D381811E6BBB7D008A7454 /* ViewController.swift in Sources */,
 				C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */,
+				C8BB78E21E6BC106000DAA56 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
