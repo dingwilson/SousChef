@@ -10,5 +10,6 @@ target 'SousChef' do
   pod 'SwiftyJSON'
   pod 'SwiftVideoBackground'
   pod 'SDWebImage'
+  pod 'Cosmos'
 
 end
