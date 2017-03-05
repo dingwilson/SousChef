@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>SwiftVideoBackground.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,6 +27,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3AE346A862AA4CE2E351C78CE2782E6C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8645A9CE7174B89F838F643CE57FB84E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
@@ -33,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>AE6AC414D34EBEBD63779C9DB0727271</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBAA17BB6FE597F41BED246D125B9702</key>
 		<dict>
 			<key>primary</key>
 			<true/>

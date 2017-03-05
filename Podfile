@@ -8,5 +8,6 @@ target 'SousChef' do
   # Pods for SousChef
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'SwiftVideoBackground'
 
 end

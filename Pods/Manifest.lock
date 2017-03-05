@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.3.0)
+  - SwiftVideoBackground (0.04)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
+  - SwiftVideoBackground
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  SwiftVideoBackground: c0253281fcda5047c36067cbb852d8061513058b
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: b2ff46524d39853324dbf5f2ffe51d65e8bf5e7a
+PODFILE CHECKSUM: 15c3d5c2946dd758b254ac04578a2431f71dce2d
 
 COCOAPODS: 1.2.0

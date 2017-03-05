@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C8BB78DD1E6BBFC0000DAA56 /* Recipe in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DB1E6BBFC0000DAA56 /* Recipe */; };
 		C8BB78DE1E6BBFC0000DAA56 /* RecipeSearch in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */; };
+		C8BB78E01E6BC09B000DAA56 /* Background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */; };
 		C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */; };
 		C8D381811E6BBB7D008A7454 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D381801E6BBB7D008A7454 /* ViewController.swift */; };
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SousChef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SousChef/Pods-SousChef.debug.xcconfig"; sourceTree = "<group>"; };
 		C8BB78DB1E6BBFC0000DAA56 /* Recipe */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Recipe; sourceTree = "<group>"; };
 		C8BB78DC1E6BBFC0000DAA56 /* RecipeSearch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RecipeSearch; sourceTree = "<group>"; };
+		C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.mp4; sourceTree = "<group>"; };
 		C8D3817B1E6BBB7C008A7454 /* SousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D381801E6BBB7D008A7454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				C8D381851E6BBB7D008A7454 /* Assets.xcassets */,
 				C8D381871E6BBB7D008A7454 /* LaunchScreen.storyboard */,
 				C8D3818A1E6BBB7D008A7454 /* Info.plist */,
+				C8BB78DF1E6BC09B000DAA56 /* Background.mp4 */,
 			);
 			path = SousChef;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				C8BB78DD1E6BBFC0000DAA56 /* Recipe in Resources */,
 				C8BB78DE1E6BBFC0000DAA56 /* RecipeSearch in Resources */,
 				C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */,
+				C8BB78E01E6BC09B000DAA56 /* Background.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
