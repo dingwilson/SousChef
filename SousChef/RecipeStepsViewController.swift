@@ -25,6 +25,8 @@ class RecipeStepsViewController: UIViewController {
     
     var timer = Timer()
     
+    var timerTime = 0
+    
     var instructions: [String] = [String]()
     
     let mySynthesizer = AVSpeechSynthesizer()
@@ -40,7 +42,8 @@ class RecipeStepsViewController: UIViewController {
         
         getKeyFromPlist()
         getNext()
-
+        
+        timeLabel.isHidden = true
     }
     
     private func getKeyFromPlist() {
@@ -58,7 +61,6 @@ class RecipeStepsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.getNext), userInfo: nil, repeats: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -68,13 +70,12 @@ class RecipeStepsViewController: UIViewController {
     }
     
     func getNext() {
-        
         self.stopStreaming()
         self.speechToText = SpeechToText(username: username, password: password)
         self.lastCount = 0
         self.startStreaming()
         actionLabel.text = instructions[currentStep]
-//            speak(data: instructions[currentStep])
+        speak(data: instructions[currentStep])
         
         if instructions.count > currentStep + 1 {
             currentStep += 1
@@ -163,11 +164,8 @@ class RecipeStepsViewController: UIViewController {
                 
                 if (self.assistantTriggerWords.contains(word)) {
                     self.triggered = false
-                    print("Triggered.")
                     
                     if (results.bestTranscript.contains("set a timer" ) || results.bestTranscript.contains("set a time there" ) || results.bestTranscript.contains("Susanna timer" )) {
-//                        print("SETTING A TIMER!")
-                        
                         if (results.bestTranscript.contains("minutes") || results.bestTranscript.contains("minute")) {
                             
                             let nums = [ "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"]
@@ -176,10 +174,7 @@ class RecipeStepsViewController: UIViewController {
                             
                             for word in splitResults {
                                 if nums.contains(word) {
-                                    // FOUND IT HERE.
                                     let numberResult = self.convertNumber(number: word)
-                                    print("NUMBER: \(numberResult)")
-                                    
                                     if (!self.timerStarted) {
                                         self.startTimer(num: numberResult)
                                     }
@@ -198,7 +193,6 @@ class RecipeStepsViewController: UIViewController {
                         self.lastCount = results.bestTranscript.characters.count
                     }
                     else if (results.bestTranscript.contains("back") || results.bestTranscript.contains("previous")) {
-                        print("PREVIOUS")
                         if (self.lastCount != results.bestTranscript.characters.count) {
                             self.triggered = true;
                             self.speechToText.stopRecognizeMicrophone()
@@ -215,6 +209,35 @@ class RecipeStepsViewController: UIViewController {
     
     func startTimer(num: Int) {
         self.timerStarted = true
+        self.timeLabel.isHidden = false
+        
+        self.timerTime = num
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runTimer), userInfo: nil, repeats: true)
+    }
+    
+    func runTimer() {
+        if timerTime > 0 {
+            timerTime -= 1
+            
+            var displayValue = ""
+            
+            if floor(Double(timerTime/60)) < 10 {
+                displayValue += "0\(floor(Double(timerTime/60)))"
+            } else {
+                displayValue += "\(floor(Double(timerTime/60)))"
+            }
+            
+            if timerTime%60 < 10 {
+                displayValue += ":0\(timerTime%60)"
+            } else {
+                displayValue += ":\(timerTime%60)"
+            }
+        } else {
+            timerTime = 0
+            timer.invalidate()
+            timeLabel.isHidden = true
+        }
     }
     
     func stopStreaming() {
