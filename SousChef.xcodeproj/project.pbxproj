@@ -181,7 +181,7 @@
 				TargetAttributes = {
 					C8D3817A1E6BBB7C008A7454 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = VTH3535D42;
+						DevelopmentTeam = Z88HQX98VL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -407,7 +407,7 @@
 			baseConfigurationReference = AAA6DBB8E0BCE6706C56CD59 /* Pods-SousChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VTH3535D42;
+				DEVELOPMENT_TEAM = Z88HQX98VL;
 				INFOPLIST_FILE = SousChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wilsonding.SousChef;
@@ -421,7 +421,7 @@
 			baseConfigurationReference = 8DD8BDA184422948D0A00CFB /* Pods-SousChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VTH3535D42;
+				DEVELOPMENT_TEAM = Z88HQX98VL;
 				INFOPLIST_FILE = SousChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wilsonding.SousChef;
