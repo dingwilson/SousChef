@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 enum typeOfInstruction {
     
@@ -28,12 +29,26 @@ class RecipeOverviewViewController: UIViewController {
     
     @IBOutlet weak var recipeTextView: UITextView!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     var results = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         recipeTextView.text = recipe.instructions
+        
+        imageView.sd_setImage(with: URL(string: self.recipe.photoUrl!), placeholderImage: UIImage(named: "TransparentIcon"))
+        
+        imageView.layer.cornerRadius = 50
+        
+        titleLabel.text = recipe.title
+        
+        descriptionLabel.text = recipe.description
         
         let temp = recipe.instructions?.components(separatedBy: ". ")
         
