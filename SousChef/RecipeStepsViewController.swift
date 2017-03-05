@@ -24,6 +24,8 @@ class RecipeStepsViewController: UIViewController {
     var isDone = false
     
     var timer = Timer()
+    var nextTimer = Timer()
+    var prevTimer = Timer()
     
     var timerTime = 0
     
@@ -67,9 +69,12 @@ class RecipeStepsViewController: UIViewController {
         super.viewDidDisappear(animated)
         
         self.timer.invalidate()
+        self.nextTimer.invalidate()
+        self.prevTimer.invalidate()
     }
     
     func getNext() {
+    
         self.stopStreaming()
         self.speechToText = SpeechToText(username: username, password: password)
         self.lastCount = 0
@@ -84,6 +89,7 @@ class RecipeStepsViewController: UIViewController {
                 isDone = true
             }
         }
+        self.startStreaming()
         
     }
     
@@ -184,22 +190,29 @@ class RecipeStepsViewController: UIViewController {
                         
                     } else if (results.bestTranscript.contains("next") || results.bestTranscript.contains("forward")  || results.bestTranscript.contains("for")) {
 
-                        if (self.lastCount != results.bestTranscript.characters.count) {
+                        if (self.lastCount != results.bestTranscript.characters.count && !self.triggered) {
                             self.triggered = true;
                             self.speechToText.stopRecognizeMicrophone()
                             self.getNext()
+                            self.nextTimer = Timer(timeInterval: 4, target: self, selector: #selector(self.canNextTimer), userInfo: nil, repeats: false)
                         }
                         
                         self.lastCount = results.bestTranscript.characters.count
+                        self.stopStreaming()
+                        self.startStreaming()
                     }
                     else if (results.bestTranscript.contains("back") || results.bestTranscript.contains("previous")) {
-                        if (self.lastCount != results.bestTranscript.characters.count) {
+                        
+                        if (self.lastCount != results.bestTranscript.characters.count && !self.triggered) {
                             self.triggered = true;
                             self.speechToText.stopRecognizeMicrophone()
                             self.getPrev()
+                            self.prevTimer = Timer(timeInterval: 4, target: self, selector: #selector(self.canPrevTimer), userInfo: nil, repeats: false)
                         }
                         
                         self.lastCount = results.bestTranscript.characters.count
+                        self.stopStreaming()
+                        self.startStreaming()
                     }
                     
                 }
@@ -214,6 +227,16 @@ class RecipeStepsViewController: UIViewController {
         self.timerTime = num
         
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runTimer), userInfo: nil, repeats: true)
+    }
+    
+    
+    
+    func canNextTimer() {
+        self.triggered = false
+    }
+    
+    func canPrevTimer() {
+        self.triggered = false
     }
     
     func runTimer() {
