@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class RecipeSearchResultsTableViewController: UITableViewController {
     
@@ -56,9 +57,15 @@ class RecipeSearchResultsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
-        // Configure the cell...
-        cell.textLabel?.text = self.recipeSearchResults.results?[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! RecipeTableViewCell
+        
+        cell.recipeImageView?.sd_setImage(with: URL(string: (self.recipeSearchResults.results?[indexPath.row].photoUrl)!), placeholderImage: UIImage(named: "TransparentIcon"))
+        
+        cell.titleLabel?.text = self.recipeSearchResults.results?[indexPath.row].title
+        
+        cell.descriptionLabel?.text = self.recipeSearchResults.results?[indexPath.row].title
+        
+        
         return cell
     }
     
@@ -136,4 +143,23 @@ class RecipeSearchResultsTableViewController: UITableViewController {
         }
     }
 
+}
+
+extension UIImageView {
+    public func imageFromServerURL(urlString: String) {
+        
+        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print("Image Failed to Download")
+                return
+            }
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.image = image
+            })
+            
+        }).resume()
+    }
 }

@@ -8,25 +8,43 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-SousChef.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>SwiftVideoBackground.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3543CE640A91ABE980FE5C8ED19733B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3AE346A862AA4CE2E351C78CE2782E6C</key>
 		<dict>
 			<key>primary</key>
@@ -38,6 +56,21 @@
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9357EC16C414F255CB421E213801136D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB649467D3828F1F1C1884FEC0918DEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB8A45F85D9F1FC2E3C6A60710F8A499</key>
 		<dict>
 			<key>primary</key>
 			<true/>
