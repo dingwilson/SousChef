@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import SpeechToTextV1
+import SpeechToTextV1 // https://github.com/watson-developer-cloud/swift-sdk#speech-to-text
 
 class RecipeStepsViewController: UIViewController {
 
