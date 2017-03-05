@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-public final class Poster {
+public final class RecipePoster {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {

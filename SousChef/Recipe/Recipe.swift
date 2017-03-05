@@ -54,7 +54,7 @@ public final class Recipe {
 
   // MARK: Properties
   public var collection: String?
-  public var poster: Poster?
+  public var poster: RecipePoster?
   public var adTags: String?
   public var yieldNumber: Int?
   public var isBookmark: Bool? = false
@@ -106,7 +106,7 @@ public final class Recipe {
   /// - parameter json: JSON object from SwiftyJSON.
   public required init(json: JSON) {
     collection = json[SerializationKeys.collection].string
-    poster = Poster(json: json[SerializationKeys.poster])
+    poster = RecipePoster(json: json[SerializationKeys.poster])
     adTags = json[SerializationKeys.adTags].string
     yieldNumber = json[SerializationKeys.yieldNumber].int
     isBookmark = json[SerializationKeys.isBookmark].boolValue

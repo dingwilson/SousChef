@@ -95,7 +95,7 @@
                                 <rect key="frame" x="163" y="356" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <action selector="didPressSearchButton:" destination="wMb-sN-L4V" eventType="touchUpInside" id="ia9-KO-1MX"/>
+                                    <action selector="didPressSearchButton:" destination="wMb-sN-L4V" eventType="touchUpInside" id="R5z-x4-Jqm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,7 +131,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OB2-Fb-FfZ" id="M0B-H9-NeH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
