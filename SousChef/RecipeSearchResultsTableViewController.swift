@@ -51,6 +51,12 @@ class RecipeSearchResultsTableViewController: UITableViewController {
         
         cell.recipeImageView?.sd_setImage(with: URL(string: (self.recipeSearchResults.results?[indexPath.row].photoUrl)!), placeholderImage: UIImage(named: "TransparentIcon"))
         
+        cell.recipeImageView?.layer.borderWidth = 1.0
+        cell.recipeImageView?.layer.masksToBounds = false
+        cell.recipeImageView?.layer.borderColor = UIColor.white.cgColor
+        cell.recipeImageView?.layer.cornerRadius = (cell.recipeImageView?.frame.size.width)!/2
+        cell.recipeImageView?.clipsToBounds = true
+        
         cell.titleLabel?.text = self.recipeSearchResults.results?[indexPath.row].title
         
         cell.starView?.rating = Double((self.recipeSearchResults.results?[indexPath.row].starRating)!)

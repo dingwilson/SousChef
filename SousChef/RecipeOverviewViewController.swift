@@ -43,8 +43,12 @@ class RecipeOverviewViewController: UIViewController {
         recipeTextView.text = recipe.instructions
         
         imageView.sd_setImage(with: URL(string: self.recipe.photoUrl!), placeholderImage: UIImage(named: "TransparentIcon"))
-        
-        imageView.layer.cornerRadius = 50
+
+        imageView.layer.borderWidth = 1.0
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.clipsToBounds = true
         
         titleLabel.text = recipe.title
         
