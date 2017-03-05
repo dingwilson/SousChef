@@ -13,6 +13,7 @@
 		C8BB78E81E6BC867000DAA56 /* RecipeOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E71E6BC867000DAA56 /* RecipeOverviewViewController.swift */; };
 		C8BB78EA1E6BC87C000DAA56 /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78E91E6BC87C000DAA56 /* RecipeStepsViewController.swift */; };
 		C8BB78EC1E6BEB27000DAA56 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB78EB1E6BEB27000DAA56 /* RecipeTableViewCell.swift */; };
+		C8BB78EE1E6C2698000DAA56 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BB78ED1E6C2698000DAA56 /* SpeechToTextV1.framework */; };
 		C8D3817F1E6BBB7D008A7454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */; };
 		C8D381841E6BBB7D008A7454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D381821E6BBB7D008A7454 /* Main.storyboard */; };
 		C8D381861E6BBB7D008A7454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D381851E6BBB7D008A7454 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		C8BB78E71E6BC867000DAA56 /* RecipeOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeOverviewViewController.swift; sourceTree = "<group>"; };
 		C8BB78E91E6BC87C000DAA56 /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
 		C8BB78EB1E6BEB27000DAA56 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		C8BB78ED1E6C2698000DAA56 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		C8D3817B1E6BBB7C008A7454 /* SousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3817E1E6BBB7D008A7454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D381831E6BBB7D008A7454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2FB0C5D50BBBBA75EDFA56C /* Pods_SousChef.framework in Frameworks */,
+				C8BB78EE1E6C2698000DAA56 /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,7 @@
 		0B323561268298E0BE41BB17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8BB78ED1E6C2698000DAA56 /* SpeechToTextV1.framework */,
 				FCBD87B8805FA586201F66B6 /* Pods_SousChef.framework */,
 			);
 			name = Frameworks;
@@ -412,6 +416,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z88HQX98VL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SousChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wilsonding.SousChef;
@@ -426,6 +434,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z88HQX98VL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SousChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wilsonding.SousChef;

@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SpeechToTextV1
 
 class RecipeStepsViewController: UIViewController {
 
