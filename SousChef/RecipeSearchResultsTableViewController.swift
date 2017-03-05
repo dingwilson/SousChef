@@ -57,7 +57,7 @@ class RecipeSearchResultsTableViewController: UITableViewController {
         cell.recipeImageView?.layer.cornerRadius = (cell.recipeImageView?.frame.size.width)!/2
         cell.recipeImageView?.clipsToBounds = true
         
-        cell.titleLabel?.text = self.recipeSearchResults.results?[indexPath.row].title
+        cell.titleLabel?.text = self.recipeSearchResults.results?[indexPath.row].title?.capitalizingFirstLetter()
         
         cell.starView?.rating = Double((self.recipeSearchResults.results?[indexPath.row].starRating)!)
         
@@ -111,5 +111,17 @@ extension UIImageView {
             })
             
         }).resume()
+    }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        let first = String(characters.prefix(1)).capitalized
+        let other = String(characters.dropFirst())
+        return first + other
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
     }
 }

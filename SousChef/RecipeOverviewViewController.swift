@@ -25,6 +25,8 @@ class RecipeOverviewViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var beginRecipeButton: UIButton!
     
     var results = [String]()
 
@@ -32,6 +34,8 @@ class RecipeOverviewViewController: UIViewController {
         super.viewDidLoad()
         
         recipeTextView.text = recipe.instructions
+        
+        beginRecipeButton.layer.cornerRadius = 8
         
         imageView.sd_setImage(with: URL(string: self.recipe.photoUrl!), placeholderImage: UIImage(named: "TransparentIcon"))
 
@@ -44,6 +48,18 @@ class RecipeOverviewViewController: UIViewController {
         titleLabel.text = recipe.title
         
         descriptionLabel.text = recipe.description
+        
+        var ingredientsList = "Ingredients: "
+        
+        for ingredient in recipe.ingredients! {
+            if ingredientsList != "Ingredients: " {
+                ingredientsList += ", "
+            }
+            
+            ingredientsList += ingredient.name!
+        }
+        
+        ingredientsLabel.text = ingredientsList
         
         let temp = recipe.instructions?.components(separatedBy: ". ")
         
