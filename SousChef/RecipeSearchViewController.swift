@@ -16,6 +16,7 @@ class RecipeSearchViewController: UIViewController {
     var recipeSearchResults: RecipeSearch = RecipeSearch()
     
     @IBOutlet weak var recipeSearchTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -23,6 +24,10 @@ class RecipeSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.red
+        
+        searchButton.layer.cornerRadius = 8
         
         getKeyFromPlist()
         
@@ -54,9 +59,6 @@ class RecipeSearchViewController: UIViewController {
                 print(error)
             }
         }
-        
-        print(query)
-        
     }
     
     @IBAction func didPressSearchButton(_ sender: UIButton) {
@@ -68,7 +70,6 @@ class RecipeSearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("\(self.recipeSearchResults.resultCount)")
         if segue.identifier == "goToRecipeResults" {
             let nextScene =  segue.destination as! RecipeSearchResultsTableViewController
             
