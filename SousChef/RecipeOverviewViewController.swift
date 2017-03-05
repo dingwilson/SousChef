@@ -116,6 +116,14 @@ class RecipeOverviewViewController: UIViewController, ChartViewDelegate {
             if nutritionalFact == 0.0 {
                 values[index] = Double(arc4random_uniform(100)) + (Double(arc4random_uniform(100))/10.0)
             }
+            
+            if index == 2 {
+                values[index] += 250.0
+            }
+            
+            if index == 9 {
+                values[index] += 100.0
+            }
         }
 
         setChart(dataPoints: dataPoints, values: values)
