@@ -10,17 +10,11 @@ import UIKit
 import SDWebImage
 
 enum typeOfInstruction {
-    
     case period // All the instructions are delimited by periods and no numbers.
-    
     case number
-    
     case letter
-    
     case newline
-    
     case bullet // Default case.
-    
 }
 
 class RecipeOverviewViewController: UIViewController {
@@ -28,11 +22,8 @@ class RecipeOverviewViewController: UIViewController {
     var recipe: Recipe = Recipe()
     
     @IBOutlet weak var recipeTextView: UITextView!
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var results = [String]()
@@ -65,16 +56,11 @@ class RecipeOverviewViewController: UIViewController {
                      results.append(trimmedString)
                 }
             }
-
         }
-        
-        // Do anything with results here. 
-        
-        // Do any additional setup after loading the view.
+        // Do anything with results here.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "goToInstructions" {
             let nextScene =  segue.destination as! RecipeStepsViewController
             nextScene.instructions = self.results
