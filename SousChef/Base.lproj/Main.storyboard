@@ -86,21 +86,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8h9-ru-deI">
-                                <rect key="frame" x="22" y="230" width="337" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jo6-xQ-4LE"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8h9-ru-deI">
+                                <rect key="frame" x="19" y="172" width="337" height="41"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kun-DN-9IJ">
-                                <rect key="frame" x="146" y="268" width="89" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please search for a recipe to begin:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-CH-bnt">
+                                <rect key="frame" x="16" y="122" width="343" height="42"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdj-2E-zWb">
+                                <rect key="frame" x="16" y="210" width="340" height="3"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="8Ip-P8-Xem"/>
-                                    <constraint firstAttribute="height" constant="41" id="QhA-Oh-z0A"/>
+                                    <constraint firstAttribute="height" constant="3" id="iw7-df-Mv0"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kun-DN-9IJ">
+                                <rect key="frame" x="143" y="221" width="89" height="41"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="9mh-me-MXe"/>
+                                    <constraint firstAttribute="height" constant="41" id="Kpi-x7-WYD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,24 +122,22 @@
                                     <action selector="didPressSearchButton:" destination="wMb-sN-L4V" eventType="touchUpInside" id="R5z-x4-Jqm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please search for a recipe to begin:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-CH-bnt">
-                                <rect key="frame" x="16" y="180" width="343" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8h9-ru-deI" firstAttribute="leading" secondItem="HSI-aR-ZMC" secondAttribute="leadingMargin" constant="6" id="0ts-n4-kvU"/>
-                            <constraint firstItem="kun-DN-9IJ" firstAttribute="top" secondItem="8h9-ru-deI" secondAttribute="bottom" constant="8" symbolic="YES" id="8BA-He-hwH"/>
-                            <constraint firstItem="hu6-CH-bnt" firstAttribute="trailing" secondItem="HSI-aR-ZMC" secondAttribute="trailingMargin" id="CSo-O1-D4d"/>
-                            <constraint firstItem="hu6-CH-bnt" firstAttribute="trailing" secondItem="8h9-ru-deI" secondAttribute="trailing" id="DLc-cH-lLA"/>
-                            <constraint firstItem="mTR-n3-YNH" firstAttribute="top" secondItem="kun-DN-9IJ" secondAttribute="bottom" constant="358" id="MME-bM-m0m"/>
-                            <constraint firstItem="8h9-ru-deI" firstAttribute="top" secondItem="hu6-CH-bnt" secondAttribute="bottom" constant="8" symbolic="YES" id="Tdi-xV-3SA"/>
-                            <constraint firstItem="hu6-CH-bnt" firstAttribute="leading" secondItem="HSI-aR-ZMC" secondAttribute="leadingMargin" id="bDM-Ys-LPX"/>
-                            <constraint firstItem="8h9-ru-deI" firstAttribute="centerX" secondItem="kun-DN-9IJ" secondAttribute="centerX" id="bKn-NT-UBj"/>
-                            <constraint firstItem="hu6-CH-bnt" firstAttribute="top" secondItem="M4p-BJ-Sle" secondAttribute="bottom" constant="116" id="hFK-jv-771"/>
+                            <constraint firstItem="hu6-CH-bnt" firstAttribute="trailing" secondItem="HSI-aR-ZMC" secondAttribute="trailingMargin" id="6LU-r4-92e"/>
+                            <constraint firstItem="8h9-ru-deI" firstAttribute="trailing" secondItem="fdj-2E-zWb" secondAttribute="trailing" id="6Ut-U1-Jcf"/>
+                            <constraint firstItem="fdj-2E-zWb" firstAttribute="top" secondItem="hu6-CH-bnt" secondAttribute="bottom" constant="46" id="7jP-GU-QU2"/>
+                            <constraint firstItem="hu6-CH-bnt" firstAttribute="leading" secondItem="fdj-2E-zWb" secondAttribute="leading" id="EFc-eE-GWy"/>
+                            <constraint firstItem="hu6-CH-bnt" firstAttribute="centerX" secondItem="8h9-ru-deI" secondAttribute="centerX" id="IAf-ei-dgx"/>
+                            <constraint firstItem="8h9-ru-deI" firstAttribute="top" secondItem="hu6-CH-bnt" secondAttribute="bottom" constant="8" symbolic="YES" id="MjM-Id-GhC"/>
+                            <constraint firstItem="mTR-n3-YNH" firstAttribute="top" secondItem="kun-DN-9IJ" secondAttribute="bottom" constant="405" id="eJL-ST-dPr"/>
+                            <constraint firstItem="kun-DN-9IJ" firstAttribute="top" secondItem="fdj-2E-zWb" secondAttribute="bottom" constant="8" symbolic="YES" id="iTk-o4-A3X"/>
+                            <constraint firstItem="8h9-ru-deI" firstAttribute="leading" secondItem="HSI-aR-ZMC" secondAttribute="leadingMargin" constant="3" id="qr6-kA-bbV"/>
+                            <constraint firstItem="hu6-CH-bnt" firstAttribute="top" secondItem="M4p-BJ-Sle" secondAttribute="bottom" constant="58" id="uM3-sx-D1A"/>
+                            <constraint firstItem="hu6-CH-bnt" firstAttribute="leading" secondItem="HSI-aR-ZMC" secondAttribute="leadingMargin" id="wzF-Yw-OMM"/>
+                            <constraint firstItem="8h9-ru-deI" firstAttribute="centerX" secondItem="kun-DN-9IJ" secondAttribute="centerX" id="xAC-az-hTO"/>
+                            <constraint firstItem="kun-DN-9IJ" firstAttribute="top" secondItem="8h9-ru-deI" secondAttribute="bottom" constant="8" symbolic="YES" id="xKQ-Xr-73o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SousChef" id="kVo-ZJ-xze"/>

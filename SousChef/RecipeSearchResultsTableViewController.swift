@@ -68,23 +68,6 @@ class RecipeSearchResultsTableViewController: UITableViewController {
         
         cell.starView?.text = "(\((self.recipeSearchResults.results?[indexPath.row].reviewCount)!))"
         
-        var textColor = UIColor()
-        var backgroundColor = UIColor()
-        
-        if indexPath.row % 2 == 0 {
-            textColor = UIColor.red
-            backgroundColor = UIColor.white
-        } else {
-            textColor = UIColor.white
-            backgroundColor = UIColor(red: 255, green: 147, blue: 147, alpha: 1.0)
-        }
-        
-        cell.backgroundColor = backgroundColor
-        cell.starView?.backgroundColor = backgroundColor
-        
-        cell.titleLabel?.textColor = textColor
-        cell.starView?.tintColor = textColor
-        
         return cell
     }
     
