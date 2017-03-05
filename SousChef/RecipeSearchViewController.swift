@@ -76,14 +76,6 @@ class RecipeSearchViewController: UIViewController {
             let nextScene =  segue.destination as! RecipeSearchResultsTableViewController
             
             nextScene.recipeSearchResults = self.recipeSearchResults
-            // Pass the selected object to the new view controller.
         }
     }
-        
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-        
 }
