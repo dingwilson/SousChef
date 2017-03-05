@@ -29,7 +29,7 @@
                                         <rect key="frame" x="49" y="587" width="276" height="56"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="2iT-t1-PqJ"/>
+                                            <constraint firstAttribute="height" constant="56" id="2gi-ti-7i0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Begin">
@@ -39,33 +39,30 @@
                                             <segue destination="ss9-Ra-h9l" kind="show" id="eSI-qv-WIf"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SousChef" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6m-ZU-WfK">
-                                        <rect key="frame" x="16" y="40" width="343" height="99"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleLabel" translatesAutoresizingMaskIntoConstraints="NO" id="9Vk-x6-rtP">
+                                        <rect key="frame" x="8" y="19" width="359" height="135"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="99" id="dGx-t6-Xfg"/>
+                                            <constraint firstAttribute="height" constant="135" id="flr-lE-3h8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="71"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="as5-NZ-aAR" firstAttribute="centerX" secondItem="8DP-re-ej3" secondAttribute="centerX" id="59D-R4-92Y"/>
-                                    <constraint firstItem="s6m-ZU-WfK" firstAttribute="centerX" secondItem="as5-NZ-aAR" secondAttribute="centerX" id="8hA-an-sot"/>
-                                    <constraint firstItem="s6m-ZU-WfK" firstAttribute="leading" secondItem="8DP-re-ej3" secondAttribute="leading" constant="16" id="HYo-E0-47m"/>
-                                    <constraint firstAttribute="bottom" secondItem="as5-NZ-aAR" secondAttribute="bottom" constant="24" id="TKy-7g-g3e"/>
-                                    <constraint firstItem="as5-NZ-aAR" firstAttribute="leading" secondItem="8DP-re-ej3" secondAttribute="leading" constant="49" id="YdU-Wj-YId"/>
-                                    <constraint firstItem="s6m-ZU-WfK" firstAttribute="top" secondItem="8DP-re-ej3" secondAttribute="top" constant="40" id="awf-nd-zoW"/>
+                                    <constraint firstItem="9Vk-x6-rtP" firstAttribute="leading" secondItem="8DP-re-ej3" secondAttribute="leadingMargin" id="B6e-xs-1lj"/>
+                                    <constraint firstItem="9Vk-x6-rtP" firstAttribute="trailing" secondItem="8DP-re-ej3" secondAttribute="trailingMargin" id="EGH-O4-NdV"/>
+                                    <constraint firstAttribute="bottom" secondItem="as5-NZ-aAR" secondAttribute="bottom" constant="24" id="F6U-k3-x9Q"/>
+                                    <constraint firstItem="as5-NZ-aAR" firstAttribute="leading" secondItem="8DP-re-ej3" secondAttribute="leading" constant="49" id="cVZ-6P-uZU"/>
+                                    <constraint firstItem="9Vk-x6-rtP" firstAttribute="top" secondItem="8DP-re-ej3" secondAttribute="top" constant="19" id="ww7-AT-xJN"/>
+                                    <constraint firstItem="9Vk-x6-rtP" firstAttribute="centerX" secondItem="as5-NZ-aAR" secondAttribute="centerX" id="xf8-4D-NLj"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8DP-re-ej3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6ZK-Vt-y2A"/>
-                            <constraint firstAttribute="trailing" secondItem="8DP-re-ej3" secondAttribute="trailing" id="ILu-aW-ag1"/>
-                            <constraint firstItem="8DP-re-ej3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MiS-dQ-X4S"/>
-                            <constraint firstItem="8DP-re-ej3" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="mpe-5t-NOM"/>
+                            <constraint firstItem="8DP-re-ej3" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="92c-1s-3EM"/>
+                            <constraint firstItem="8DP-re-ej3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fuP-9i-Rci"/>
+                            <constraint firstItem="8DP-re-ej3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ow8-sD-mDQ"/>
+                            <constraint firstAttribute="trailing" secondItem="8DP-re-ej3" secondAttribute="trailing" id="rYo-KQ-zox"/>
                         </constraints>
                     </view>
                     <connections>
@@ -236,4 +233,7 @@
             <point key="canvasLocation" x="1024.8" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TitleLabel" width="187" height="50"/>
+    </resources>
 </document>
