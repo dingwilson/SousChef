@@ -16,6 +16,8 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupParallax()
 
         backgroundVideo.createBackgroundVideo(name: "Background", type: "mp4")
         
@@ -29,6 +31,25 @@ class SplashViewController: UIViewController {
         UIView.animate(withDuration: 1.5, animations: {
             self.beginButton.alpha = 1.0
         })
+    }
+    
+    func setupParallax() {
+        // Set vertical effect
+        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        verticalMotionEffect.minimumRelativeValue = -10
+        verticalMotionEffect.maximumRelativeValue = 10
+        
+        // Set horizontal effect
+        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontalMotionEffect.minimumRelativeValue = -10
+        horizontalMotionEffect.maximumRelativeValue = 10
+        
+        // Create group to combine both
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+        
+        // Add both effects to your view
+        self.view.addMotionEffect(group)
     }
 
 }
