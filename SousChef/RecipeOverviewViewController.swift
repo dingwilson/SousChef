@@ -56,7 +56,7 @@ class RecipeOverviewViewController: UIViewController {
                 ingredientsList += ", "
             }
             
-            ingredientsList += ingredient.name!
+            ingredientsList += (ingredient.name?.capitalizingFirstLetter())!
         }
         
         ingredientsLabel.text = ingredientsList

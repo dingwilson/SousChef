@@ -52,15 +52,15 @@ class RecipeStepsViewController: UIViewController {
             if instructions.count > currentStep + 1 {
                 currentStep += 1
                 upcomingActionLabel.text = instructions[currentStep]
-                if instructions.count == currentStep + 1 {
+                if instructions.count <= currentStep + 1 {
                     isDone = true
                 }
-            } else {
-                currentStep = -1
-                upcomingActionLabel.text = "Complete"
             }
         } else {
-            speak(data:instructions[currentStep])
+            if instructions.count == currentStep + 1 {
+                speak(data: instructions[currentStep])
+            }
+            
             self.timer.invalidate()
         }
     }
