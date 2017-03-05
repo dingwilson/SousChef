@@ -30,7 +30,7 @@ class RecipeSearchViewController: UIViewController {
         searchButton.layer.cornerRadius = 8
         
         getKeyFromPlist()
-        
+
     }
     
     private func getKeyFromPlist() {
