@@ -25,7 +25,9 @@ class RecipeSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.barTintColor = UIColor.red
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
         searchButton.layer.cornerRadius = 8
         
