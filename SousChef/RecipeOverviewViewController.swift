@@ -64,7 +64,7 @@ class RecipeOverviewViewController: UIViewController, ChartViewDelegate {
                     ingredientsList += ", "
                 }
                 
-                ingredientsList += (ingredient.name?.capitalizingFirstLetter())!
+                ingredientsList += (ingredient.name?.capitalized)!
             }
         }
         
@@ -114,7 +114,7 @@ class RecipeOverviewViewController: UIViewController, ChartViewDelegate {
         
         for (index, nutritionalFact) in values.enumerated() {
             if nutritionalFact == 0.0 {
-                values[index] = Double(arc4random_uniform(100))
+                values[index] = Double(arc4random_uniform(100)) + (Double(arc4random_uniform(100))/10.0)
             }
         }
 
@@ -145,25 +145,48 @@ class RecipeOverviewViewController: UIViewController, ChartViewDelegate {
         pieChartView.holeRadiusPercent = 0.0
         pieChartView.transparentCircleRadiusPercent = 0.0
         pieChartView.chartDescription?.text = ""
-        pieChartView.legend.textColor = UIColor.white
         pieChartView.animate(xAxisDuration: 0.0, yAxisDuration: 2.0)
         pieChartView.drawEntryLabelsEnabled = true
         pieChartView.usePercentValuesEnabled = false
         pieChartView.highlightValue(x: 1, dataSetIndex: 0, callDelegate: true)
     }
     
-    func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: Highlight) {
-//        if (entry.x == 0) {
-//            nutritionalLabel.text = "\((Int(entry.y))) people killed by a gunshot wound"
-//        } else if (entry.x == 1) {
-//            nutritionalLabel.text = "\((Int(entry.y))) people killed in custody"
-//        } else if (entry.x == 2) {
-//            nutritionalLabel.text = "\((Int(entry.y))) people killed by a taser"
-//        } else if (entry.x == 3) {
-//            nutritionalLabel.text = "\((Int(entry.y))) people killed by a vehicle"
-//        } else {
-//            nutritionalLabel.text = "Nutritional Test"
-//        }
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        if (entry.x == 0) {
+            nutritionalLabel.text = "Sodium: \(Int(entry.y))"
+        } else if (entry.x == 1) {
+            nutritionalLabel.text = "Dietary Fiber: \(Int(entry.y))"
+        } else if (entry.x == 2) {
+            nutritionalLabel.text = "Total Calories: \(Int(entry.y))"
+        } else if (entry.x == 3) {
+            nutritionalLabel.text = "Protein: \(Int(entry.y))"
+        } else if (entry.x == 4) {
+            nutritionalLabel.text = "Poly Fat: \(Int(entry.y))"
+        } else if (entry.x == 5) {
+            nutritionalLabel.text = "Total Fat: \(Int(entry.y))"
+        } else if (entry.x == 6) {
+            nutritionalLabel.text = "Sugar: \(Int(entry.y))"
+        } else if (entry.x == 7) {
+            nutritionalLabel.text = "Trans Fat: \(Int(entry.y))"
+        } else if (entry.x == 8) {
+            nutritionalLabel.text = "Potassium: \(Int(entry.y))"
+        } else if (entry.x == 9) {
+            nutritionalLabel.text = "Calories from Fat: \(Int(entry.y))"
+        } else if (entry.x == 10) {
+            nutritionalLabel.text = "Mono Fat: \(Int(entry.y))"
+        } else if (entry.x == 11) {
+            nutritionalLabel.text = "Total Carbs: \(Int(entry.y))"
+        } else if (entry.x == 12) {
+            nutritionalLabel.text = "Cholesterol: \(Int(entry.y))"
+        } else if (entry.x == 13) {
+            nutritionalLabel.text = "Sat Fat: \(Int(entry.y))"
+        } else {
+            nutritionalLabel.text = "Error"
+        }
+    }
+    
+    func chartValueNothingSelected(_ chartView: ChartViewBase) {
+        nutritionalLabel.text = "Nutritional Facts"
     }
     
     @IBAction func goButton(_ sender: UIButton) {
