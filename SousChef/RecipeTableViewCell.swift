@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class RecipeTableViewCell: UITableViewCell {
 
@@ -14,7 +15,7 @@ class RecipeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var starView: CosmosView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

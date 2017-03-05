@@ -156,29 +156,60 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sP3-m8-KCi">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sP3-m8-KCi">
                                             <rect key="frame" x="8" y="5" width="75" height="75"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="0jv-P5-Zh1"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDB-7X-lmI">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDB-7X-lmI">
                                             <rect key="frame" x="91" y="8" width="276" height="39"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="39" id="tPg-0Q-czY"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAx-4f-dVu">
-                                            <rect key="frame" x="91" y="55" width="276" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQu-vl-sb0" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="91" y="55" width="160" height="21"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="(0)"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BDB-7X-lmI" firstAttribute="leading" secondItem="sP3-m8-KCi" secondAttribute="trailing" constant="8" symbolic="YES" id="4w3-y4-S34"/>
+                                        <constraint firstItem="BDB-7X-lmI" firstAttribute="top" secondItem="M0B-H9-NeH" secondAttribute="topMargin" id="A8v-nd-fky"/>
+                                        <constraint firstItem="sP3-m8-KCi" firstAttribute="top" secondItem="M0B-H9-NeH" secondAttribute="topMargin" constant="-3" id="Hqw-it-aVL"/>
+                                        <constraint firstItem="BDB-7X-lmI" firstAttribute="leading" secondItem="aQu-vl-sb0" secondAttribute="leading" id="U4d-9v-Hhz"/>
+                                        <constraint firstItem="sP3-m8-KCi" firstAttribute="centerY" secondItem="M0B-H9-NeH" secondAttribute="centerY" id="XOn-Xe-baV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aQu-vl-sb0" secondAttribute="bottom" constant="0.5" id="Xj6-LV-PD5"/>
+                                        <constraint firstItem="aQu-vl-sb0" firstAttribute="top" secondItem="BDB-7X-lmI" secondAttribute="bottom" constant="8" symbolic="YES" id="aHk-2p-FQl"/>
+                                        <constraint firstAttribute="trailing" secondItem="aQu-vl-sb0" secondAttribute="trailing" constant="124" id="cJt-MJ-3Rd"/>
+                                        <constraint firstItem="BDB-7X-lmI" firstAttribute="trailing" secondItem="M0B-H9-NeH" secondAttribute="trailingMargin" id="cYb-nb-LXQ"/>
+                                        <constraint firstItem="sP3-m8-KCi" firstAttribute="leading" secondItem="M0B-H9-NeH" secondAttribute="leadingMargin" id="mnJ-cy-6eL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descriptionLabel" destination="yAx-4f-dVu" id="5je-44-MnK"/>
                                     <outlet property="recipeImageView" destination="sP3-m8-KCi" id="IX3-6Q-jZ3"/>
+                                    <outlet property="starView" destination="aQu-vl-sb0" id="lS4-v6-R2a"/>
                                     <outlet property="titleLabel" destination="BDB-7X-lmI" id="AWi-rN-Si0"/>
                                 </connections>
                             </tableViewCell>
