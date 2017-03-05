@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Search View Controller-->
         <scene sceneID="A1u-ux-aaq">
             <objects>
-                <viewController id="wMb-sN-L4V" sceneMemberID="viewController">
+                <viewController id="wMb-sN-L4V" customClass="RecipeSearchViewController" customModule="SousChef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M4p-BJ-Sle"/>
                         <viewControllerLayoutGuide type="bottom" id="mTR-n3-YNH"/>
@@ -74,6 +74,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kun-DN-9IJ">
                                 <rect key="frame" x="163" y="356" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="didPressSearchButton:" destination="wMb-sN-L4V" eventType="touchUpInside" id="ia9-KO-1MX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,6 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kVo-ZJ-xze"/>
                     <connections>
+                        <outlet property="recipeSearchTextField" destination="8h9-ru-deI" id="tmV-bW-Re5"/>
                         <segue destination="b5a-DW-iBg" kind="show" identifier="goToRecipeResults" id="Ljb-B3-QOh"/>
                     </connections>
                 </viewController>

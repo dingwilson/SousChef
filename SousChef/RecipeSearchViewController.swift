@@ -10,6 +10,8 @@ import UIKit
 
 class RecipeSearchViewController: UIViewController {
 
+    @IBOutlet weak var recipeSearchTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,20 +25,9 @@ class RecipeSearchViewController: UIViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func didPressSearchButton(_ sender: Any) {
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
